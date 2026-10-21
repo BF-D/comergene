@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ComerGene — Privacy Policy</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; color: #111; }
+    h1,h2 { line-height: 1.2; }
+    .draft { background: #fff3cd; padding: .75rem 1rem; border-radius: 8px; }
+    pre, code { white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <p class="draft"><strong>DRAFT</strong> — paste-ready for App Store Privacy Policy URL. Not lawyer-reviewed. Wellness only — not a medical device.</p>
+  <pre id="policy"></pre>
+  <script>
+    document.getElementById('policy').textContent = "# ComerGene Privacy Policy\n\nPaste this onto a public HTTPS page before App Store / Play submission. This file is the copy, not a hosted URL.\n\nLast updated: 18 August 2026\n\n## Who we are\n\nComerGene is a personalised-nutrition app. It reads a nutrigenomics report you already own and turns it into wellness guidance — meal plans and trait scores, not medical advice.\n\nThere is no separate legal entity named in this repository. Use the developer contact on the App Store or Play listing until a public contact address exists.\n\n## What the app does with a DNA report\n\nYou choose a file (BGI Genomics, 23andMe, AncestryDNA, a raw genotype export, a VCF, or a zip of one of those). ComerGene reads that file so it can map nutrition traits.\n\n- The file is parsed in memory.\n- Only the 72-locus nutrition panel is kept for scoring.\n- The upload buffer is discarded after parsing.\n- ComerGene never sequences DNA and never stores a genotype.\n- What may persist is the derived trait result — a one-way projection. You cannot reconstruct a genome from it.\n\n## What we store\n\n- Derived nutrition trait scores and the meal plan built from them.\n- On-device preferences you enter (for example age, sex, height, weight, diet notes) so nutrient targets can be calculated.\n- We do not store the original report.\n- We do not create an advertising profile.\n- We do not sell data.\n\nHealth data (those derived trait scores) is used only for app functionality: showing your traits and building a meal plan. It is not used for tracking and is not linked to an account — ComerGene does not require you to sign in.\n\n## What we do not do\n\n- No third-party advertising networks.\n- No tracking pixels or advertising identifiers.\n- No sale of personal or health data.\n- No sharing of genotype data (it is not kept).\n- No claim that results are diagnostic or clinical.\n\n## On-device storage\n\nThe iOS app uses UserDefaults (via AsyncStorage) to remember onboarding and derived results on this device. When you pick a report, the system document picker gives the app access to that file; file timestamps may be read for a file you selected.\n\n## Deletion\n\nYou can delete an analysis at any time in the app (Profile → Privacy & data). That request is permanent. The API call is DELETE /v1/analyses/{id} and is idempotent: repeating it does not leave leftovers.\n\nIf you cannot use the in-app control, contact the developer through the App Store or Play listing and ask for deletion.\n\n## Children\n\nComerGene is rated 12+. It is not directed at children under 13. Do not upload someone else's report unless you have the right to do so.\n\n## Wellness, not medicine\n\nEverything ComerGene shows is wellness and lifestyle guidance. It is not a diagnosis, a disease-risk score, or a clinical recommendation, and it does not replace a qualified clinician.\n\n## Changes\n\nIf this policy changes in a material way, we will update the date above and the hosted page you paste this onto.\n\n## Contact\n\nUse the App Store / Play Console developer contact until a public email and website exist. Do not treat placeholder hosts in .env.example or the Dockerfile as real support addresses.\n";
+  </script>
+</body>
+</html>
